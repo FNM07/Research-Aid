@@ -1,0 +1,137 @@
+<?php
+
+
+session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: authentication/login.php');
+  }
+  if (isset($_GET['sign_out'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: index.html");
+  }
+
+
+?>
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+	<title>Research Aid</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Instruction Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//tags -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style_new.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" rel="stylesheet">
+	
+		
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header-1">
+		<div class="content white agile-info">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<a class="navbar-brand" href="index.html">
+							<h1><span class="fa fa-book" aria-hidden="true"></span> Research Aid <label>Education</label></h1>
+						</a>
+					</div>
+					<!--/.navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-2" id="link-effect-2">
+							<ul class="nav navbar-nav">
+								<li><a href="home.html" class="effect-3">Home</a></li>
+								<li class="active"><a href="s_about.html" class="effect-3">About</a></li>
+								<li><a href="services.php" class="effect-3">Resources</a></li>
+								<!--<li><a href="gallery.html" class="effect-3">Profile</a></li>-->
+								<!--<li class="dropdown">-->
+								<!--<a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Pages <b class="caret"></b></a>-->
+								<!--<ul class="dropdown-menu">-->
+								<!--<li><a href="codes.html">Codes</a></li>-->
+								<!--<li><a href="icons.html">Icons</a></li>-->
+								<!--</ul>-->
+								<!--</li>-->
+								<li><a href="myreadpapers.php" class="effect-3">My Read Papers</a></li>
+
+								<li><a href="u_profile.php" class="effect-3">Profile</a></li>
+								
+								<li><a href="index.html" class="effect-3">Sign Out</a></li>
+
+							</ul>
+						</nav>
+					</div>
+					<!--/.navbar-collapse-->
+					<!--/.navbar-->
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- about -->
+	<div class="welcome">
+		<div class="container">
+		<h3 class="heading-agileinfo">About Us<span>  </span></h3>
+			<div class="w3ls_news_grids"> 
+					<h3 id="h1.-bootstrap-heading">This is a research website to help the students find related resources to their research topic and assist the supervisors to keep track of the progress of his students. Supervisors can create separate groups and add other teachers or students as members. Students and teachers both can publish their papers publicly on the site. They can also get the suggestions of other available papers related to their research field easily.<a class="anchorjs-link" href="#h1.-bootstrap-heading"><span class="anchorjs-icon"></span></a></h1>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //about -->
+
+
+<!-- footer -->
+	
+
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<!-- skills -->
+	<script src="js/skill.bars.jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$('.skillbar').skillBars({
+				from: 0,
+				speed: 4000, 
+				interval: 100,
+				decimals: 0,
+			});
+			
+		});
+	</script>
+<!-- //skills -->
+</body>
+</html>
